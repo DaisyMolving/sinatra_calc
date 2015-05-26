@@ -1,0 +1,14 @@
+<form action="/bmi" method="get">
+  <label for="measuring_system">METRIC (m) OR IMPERIAL (i)?</label>
+  <input type="text" name="measuring_system" placeholder= "Enter the measuring system">
+  <label for="first">WEIGHT (in metric kilograms or imperial pounds)</label>
+  <input type="text" name="first" placeholder= "Enter the first number">
+  <label for="second">SECOND NUMBER (in metric metres or imperial inches)</label>
+  <input type="text" name="second" placeholder= "Enter the second number">
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <p> Your BMI is: <%= @result %> </p>
+<%end%>
+
