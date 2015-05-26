@@ -1,0 +1,37 @@
+<!-- When you submit this worm it will fire an http get request to '/' with the relevant data in the params hash -->
+
+<form action="/" method="get">
+  <label for="first">FIRST NUMBER</label>
+  <input type="text" name="first" placeholder= "Enter the first number">
+  <label for="operator">OPERATOR</label>
+  <input type="text" name="operator" placeholder= "Enter the operator">
+  <label for="second">SECOND NUMBER</label>
+  <input type="text" name="second" placeholder= "Enter the second number">
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <p> The result of <%= @first %> <%= @operator %> <%= @second %> is: <%= @result %> </p>
+<%end%>
+
+<form action="/power" method="get">
+  <label for="first">FIRST NUMBER</label>
+  <input type="text" name="first" placeholder= "Enter the first number">
+  <label for="second">TO THE POWER OF</label>
+  <input type="text" name="second" placeholder= "Enter the second number">
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <p> The result of <%= @first %> to the power of <%= @second %> is: <%= @result %> </p>
+<%end%>
+
+<form action="/sqrt" method="get">
+  <label for="first">I WANT TO FIND THE SQUARE ROOT OF</label>
+  <input type="text" name="first" placeholder= "Enter the first number">
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <p> The result of <%= @first %> to the power of <%= @second %> is: <%= @result %> </p>
+<%end%>

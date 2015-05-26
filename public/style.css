@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  margin: 40px;
+  text-decoration: none;
+  color: snow;
+  background-color: goldenrod;
+}
+
+nav {
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  padding: 3%;
+  border: 4px dotted white;
+}
+
+li a {
+  text-decoration: none;
+  color: snow;
+  font-family: helvetica;
+  font-size: 15px;
+}
+
+div {
+  padding: 50px;
+  font-family: helvetica;
+  font-size: 15px;
+
+}
