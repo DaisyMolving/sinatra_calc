@@ -45,14 +45,28 @@ get '/bmi' do
   erb :bmi
 end
 
-get '/mortgage' do
-   
+get '/mortgage' do   
+  @principal = params[:principal].to_f
+  @interest_rate = params[:interest_rate].to_f 
+  @number_of_payments = params[:number_of_payments].to_f
 
-
- erb :mortgage
+  @result = (@principal * ((@interest_rate * ((1 + @interest_rate) **@number_of_payments)) / (((1 + @interest_rate)**@number_of_payments)-1))).round(2)  
+  erb :mortgage
 end
 
 get '/trip_calc' do
+  @distance = params[:distance].to_f
+  @speed = params[:speed].to_f
+  @cost_per_gallon = params[:cost_per_gallon].to_f
+  @fuel_efficiency = params[:fuel_efficiency].to_f
+  
+  @result_length = (@distance / @speed).round(1)
+  @result_cost = @distance / (@fuel_efficiency - (@speed - 60) *2) * @cost_per_gallon
+  
+  @result = []
 
-erb :trip
+  @result << @result_length
+  @result << @result_cost
+
+  erb :trip
 end

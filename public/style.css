@@ -2,7 +2,9 @@ body {
   text-align: center;
   margin: 40px;
   text-decoration: none;
-  color: snow;
+  color: black;
+  background: url('/conan_surprise.png') right top no-repeat; 
+  background-size: 70%;
   background-color: goldenrod;
 }
 
@@ -13,12 +15,12 @@ nav {
 li {
   display: inline-block;
   padding: 3%;
-  border: 4px dotted white;
+  border: 4px dotted rgb(253, 46, 3)
 }
 
 li a {
   text-decoration: none;
-  color: snow;
+  color: rgb(253, 46, 3);
   font-family: helvetica;
   font-size: 15px;
 }

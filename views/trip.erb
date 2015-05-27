@@ -1,0 +1,21 @@
+<form action="/trip_calc" method="get">
+
+  <label for="distance">WHAT IS THE TOTAL DISTANCE?</label>
+  <input type="text" name="distance" placeholder= "Enter the total distance">
+
+  <label for="speed">WHAT IS YOUR AVERAGE SPEED?</label>
+  <input type="text" name="speed" placeholder= "Enter the average speed">
+
+  <label for="cost_per_gallon">WHAT IS THE COST OF FUEL PER GALLON?</label>
+  <input type="text" name="cost_per_gallon" placeholder= "Enter the cost per gallon">
+
+  <label for="fuel_efficiency">WHAT IS THE FUEL EFFICIENCY OF YOUR VEHICLE?</label>
+  <input type="text" name="fuel_efficiency" placeholder= "Enter the fuel efficiency">
+
+  <input type="submit">
+</form>
+
+<% if @result %>
+  <p> Your trip will take <%=@result[0] %> hours and will cost $ <%=@result[1] %></p>
+<%end%>
+

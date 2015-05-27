@@ -1,13 +1,17 @@
-<form action="/bmi" method="get">
-  <label for="measuring_system">METRIC (m) OR IMPERIAL (i)?</label>
-  <input type="text" name="measuring_system" placeholder= "Enter the measuring system">
-  <label for="first">WEIGHT (in metric kilograms or imperial pounds)</label>
-  <input type="text" name="first" placeholder= "Enter the first number">
-  <label for="second">SECOND NUMBER (in metric metres or imperial inches)</label>
-  <input type="text" name="second" placeholder= "Enter the second number">
+<form action="/mortgage" method="get">
+  <label for="principal">PRINCIPAL AMOUNT</label>
+  <input type="text" name="principal" placeholder= "Enter the principal amount">
+
+  <label for="interest_rate">INTEREST RATE</label>
+  <input type="text" name="interest_rate" placeholder= "Enter the interest rate">
+
+  <label for="number_of_payments">PLANNED NUMBER OF PAYMENTS</label>
+  <input type="text" name="number_of_payments" placeholder= "Enter the number of payments">
+
   <input type="submit">
 </form>
 
+
 <% if @result %>
-  <p> Your BMI is: <%= @result %> </p>
+  <p> Your monthly payment is <%= @result %> </p>
 <%end%>
